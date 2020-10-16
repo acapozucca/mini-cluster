@@ -1,0 +1,32 @@
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+ 
+  config.vm.box = "debian/buster64"
+  config.vm.hostname = "mc-master1"
+  config.vm.network :private_network, ip: "192.168.98.100"
+
+  #config.vm.synced_folder "data", "/vagrant_data"
+  #config.vm.synced_folder "scripts", "/vagrant_scripts"
+
+
+  config.vm.provider :virtualbox do |vb|
+   
+    vb.customize [
+      'modifyvm', :id,
+      '--natdnshostresolver1', 'on',
+      '--memory', '2048',
+      '--cpus', '2'
+    ]
+    
+  end  
+  
+  config.vm.provision "shell", inline: <<-SHELL
+     	sudo apt-get update
+     	#sudo apt-get install --yes python
+     	#sudo apt-get install dpkg     	
+   	SHELL
+   
+  
+  
+end
