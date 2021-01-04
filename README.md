@@ -1,4 +1,4 @@
-# Mini-cluster 
+# Mini-cluster
 -------------------------
 
 ## Objectives
