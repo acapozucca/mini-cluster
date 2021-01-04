@@ -25,3 +25,4 @@ Laptop with at least 8 Gb memory (recommended 16 Gb, ideally 32 Gb)
 * (only if using Windows 10 or Windows 8 Pro) Disable Hyper-V, see instructions to disable here: https://www.poweronplatforms.com/enable-disable-hyper-v-windows-10-8/
 * Check installation with the command `vagrant -v`'
 
+
